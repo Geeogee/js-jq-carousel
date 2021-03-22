@@ -103,12 +103,6 @@
 
 // VanillaJs version
 
-// ---------- WORK IN PROGRESS --------------//
-
-// querySelector da usare
-// generare pallini con for in base al numero di immagini
-// gestire immagini con this
-
 function changeSlide(index, images, dots, actionVal) {
     
     var newIndex = index + actionVal;
