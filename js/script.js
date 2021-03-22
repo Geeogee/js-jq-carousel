@@ -1,4 +1,4 @@
-JQuery Version
+// JQuery Version
 
 function nextClick() {
 
@@ -88,6 +88,47 @@ $(document).ready(init);
     
 //     nextButton.addEventListener("click", nextClick);
 //     prevButton.addEventListener("click", prevClick);
+// }
+
+// document.addEventListener("DOMContentLoaded", init);
+
+
+
+
+
+
+//---------- WORK IN PROGRESS --------------//
+
+// Vanilla JS refactoring 
+
+// function slideShow(newSlide) {
+//     console.log(newSlide);
+//     var images = document.getElementById("images").children;
+//     for (var i=0; i<images.length; i++) {
+//         if(images[i].classList.contains("active")) {
+//             images[i].classList.remove("active");
+//         }
+//     }
+
+//     if (newSlide > images.length - 1) {
+//         newSlide = 0;
+//     }
+//     images[newSlide].classList.add("active");
+    
+// } 
+
+// function init() {
+//     var nextButton = document.getElementById("next");
+//     var prevButton = document.getElementById("prev");
+//     var firstSlide = 1;
+//     var newSlide;
+//     nextButton.addEventListener("click", function() {
+
+//         newSlide = firstSlide + 1;
+//         slideShow(newSlide);
+//         firstSlide = newSlide;
+        
+//     })
 // }
 
 // document.addEventListener("DOMContentLoaded", init);
