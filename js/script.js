@@ -154,22 +154,6 @@ function init() {
     var nextButton = document.getElementById("next");
     var prevButton = document.getElementById("prev");
 
-    for (var i=0; i<dots.length; i++) {
-        
-        dots[i].addEventListener("click", function() {
-
-            var dotValue = parseInt(this.dataset.number);
-            console.log(dotValue);
-            
-            images[index].classList.remove("active");
-            dots[index].classList.remove("dot-active");
-            this.classList.add("dot-active");
-            images[dotValue].classList.add("active");
-
-            index = dotValue;
-        });
-    }
-
     nextButton.addEventListener("click", function() {
 
        index = changeSlide(index, images, dots, 1);
@@ -180,10 +164,20 @@ function init() {
         index = changeSlide(index, images, dots, -1);
      });
 
+     for (var i=0; i<dots.length; i++) {
+        
+        dots[i].addEventListener("click", function() {
 
+            var dotValue = parseInt(this.dataset.number);
 
-    
-    
+            images[index].classList.remove("active");
+            dots[index].classList.remove("dot-active");
+            this.classList.add("dot-active");
+            images[dotValue].classList.add("active");
+
+            index = dotValue;
+        });
+    }    
 }
 
 document.addEventListener("DOMContentLoaded", init);
