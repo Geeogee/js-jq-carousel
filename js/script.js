@@ -1,3 +1,5 @@
+JQuery Version
+
 function nextClick() {
 
     var activeImg = $(".active");
@@ -38,3 +40,54 @@ function init() {
 }
 
 $(document).ready(init);
+
+// VanillaJs version
+
+// function nextClick() {
+    
+//     var images = document.getElementById("images").children;
+    
+//     for (var i=0; i<images.length; i++) {
+//         if (images[i].classList.contains("active")) {
+//             images[i].classList.remove("active");
+//             var next = i + 1;
+//             if (next > images.length - 1) {
+//                 next = 0;
+//             }
+//             images[next].classList.add("active");
+//             break;
+//         }
+//     }
+// }
+
+// function prevClick() {
+
+//     var images = document.getElementById("images").children;
+
+//     for (var i=images.length - 1; i>=0; i--) {
+
+//         if (images[i].classList.contains("active")) {
+
+//             images[i].classList.remove("active");
+//             var prev = i - 1;
+//             if (prev < 0) {
+
+//                 prev = images.length - 1;
+//             }
+//             images[prev].classList.add("active");
+//             break;
+//         }
+//     }
+// }
+
+
+// function init() {
+    
+//     var nextButton = document.getElementById("next");
+//     var prevButton = document.getElementById("prev");
+    
+//     nextButton.addEventListener("click", nextClick);
+//     prevButton.addEventListener("click", prevClick);
+// }
+
+// document.addEventListener("DOMContentLoaded", init);
