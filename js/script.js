@@ -69,6 +69,19 @@ function genDots(n) {
     }
 }
 
+function clickedDot() {
+    var images = $("#images > img");
+    var activeDot = $(".image-dots > i.dot-active");
+    var dotValue = $(this).data("number");
+
+    activeDot.removeClass("dot-active");
+    $(this).addClass("dot-active");
+
+    $(".active").removeClass("active");
+    images.eq(dotValue).addClass("active");
+    
+}
+
 function init() {
     
     $("#images img:first-child").addClass("active");
@@ -80,6 +93,8 @@ function init() {
 
     $(".next").click(nextClick);
     $(".prev").click(prevClick);
+
+    $(".image-dots > *").click(clickedDot);
 
 }
 
