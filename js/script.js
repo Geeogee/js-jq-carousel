@@ -1,5 +1,6 @@
 function nextClick() {
-    console.log("Hello world next!")
+    var activeImg = $(".active");
+    console.log(activeImg);
 }
 
 function prevClick() {
