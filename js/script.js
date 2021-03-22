@@ -1,21 +1,35 @@
 function nextClick() {
-    var activeImg = $(".active");
-    console.log(activeImg);
 
+    var activeImg = $(".active");
     var nextImg = activeImg.next();
-    console.log(nextImg);
-    activeImg.removeClass("active");
-    nextImg.addClass("active");
+
+    if (activeImg.hasClass("last")) {
+        
+        nextImg = $(".first");
+        activeImg.removeClass("active");
+        nextImg.addClass("active");
+    } else {
+
+        activeImg.removeClass("active");
+        nextImg.addClass("active");
+    }
+    
 }
 
 function prevClick() {
     var activeImg = $(".active");
-    console.log(activeImg);
-
     var prevImg = activeImg.prev();
-    console.log(prevImg);
-    activeImg.removeClass("active");
-    prevImg.addClass("active");
+
+    if (activeImg.hasClass("first")) {
+        
+        prevImg = $(".last");
+        activeImg.removeClass("active");
+        prevImg.addClass("active");
+    } else {
+
+        activeImg.removeClass("active");
+        prevImg.addClass("active");
+    }
 }
 
 function init() {
